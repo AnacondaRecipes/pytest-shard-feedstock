@@ -37,7 +37,7 @@ about:
   home: "https://github.com/AdamGleave/pytest-shard"
   license: MIT
   license_family: MIT
-  license_url: https://github.com/AdamGleave/pytest-shard/blob/64610a08dac6b0511b6d51cf895d0e1040d162ad/LICENSE
+  license_url: https://github.com/AdamGleave/pytest-shard/blob/53745ccddf016be134da4a42e94222eae8cf1564/LICENSE
   summary: "Shards tests based on a hash of their test name."
   description: |
     Enables easy parallelism across machines, suitable for a wide variety of
