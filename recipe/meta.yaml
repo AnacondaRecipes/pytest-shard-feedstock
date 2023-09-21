@@ -1,0 +1,52 @@
+{% set name = "pytest-shard" %}
+{% set version = "0.1.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: b86a967fbfd1c8e50295095ccda031b7e890862ee06531d5142844f4c1d1cd67 
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  host:
+    - pip
+    - python
+    - setuptools
+    - wheel
+  run:
+    - pytest
+    - python
+
+test:
+  imports:
+    - pytest_shard
+  requires:
+    - pip
+    - ripgrep
+  commands:
+    - pip check
+    - pytest --traceconfig | rg pytest-shard-{{ version }}
+
+about:
+  home: https://github.com/AdamGleave/pytest-shard
+  license: MIT
+  license_family: MIT
+  license_url: https://github.com/AdamGleave/pytest-shard/blob/53745ccddf016be134da4a42e94222eae8cf1564/LICENSE
+  summary: Shards tests based on a hash of their test name.
+  description: |
+    Enables easy parallelism across machines, suitable for a wide variety of
+    continuous integration services. Tests are split at the finest level of
+    granularity, individual test cases, enabling parallelism even if all of your
+    tests are in a single file (or even single parameterized test method).
+  doc_url: https://github.com/AdamGleave/pytest-shard/blob/53745ccddf016be134da4a42e94222eae8cf1564/README.md
+  dev_url: https://github.com/AdamGleave/pytest-shard
+
+extra:
+  recipe-maintainers:
+    - danpetry
