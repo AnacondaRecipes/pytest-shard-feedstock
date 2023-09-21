@@ -44,7 +44,7 @@ about:
     continuous integration services. Tests are split at the finest level of
     granularity, individual test cases, enabling parallelism even if all of your
     tests are in a single file (or even single parameterized test method).
-  doc_url: https://github.com/AdamGleave/pytest-shard/blob/64610a08dac6b0511b6d51cf895d0e1040d162ad/README.md
+  doc_url: https://github.com/AdamGleave/pytest-shard/blob/53745ccddf016be134da4a42e94222eae8cf1564/README.md
   dev_url: https://github.com/AdamGleave/pytest-shard
 
 extra:
