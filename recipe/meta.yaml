@@ -34,7 +34,7 @@ test:
     - pytest --traceconfig | rg pytest-shard-{{ version }}
 
 about:
-  home: "https://github.com/AdamGleave/pytest-shard"
+  home: https://github.com/AdamGleave/pytest-shard
   license: MIT
   license_family: MIT
   license_url: https://github.com/AdamGleave/pytest-shard/blob/53745ccddf016be134da4a42e94222eae8cf1564/LICENSE
